@@ -1,24 +1,15 @@
-import ThemeToggle from "./components/ThemeToggle";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-bg-primary font-body">
       <main className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Header */}
         <header className="mb-16">
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h1 className="text-4xl font-bold text-text-primary font-heading mb-4">
-                Semantic Theme Demo
-              </h1>
-              <p className="text-lg text-text-secondary">
-                A comprehensive design system with semantic color and font tokens
-              </p>
-            </div>
-            <div className="flex-shrink-0 ml-4">
-              <ThemeToggle />
-            </div>
-          </div>
+          <h1 className="text-4xl font-bold text-text-primary font-heading mb-4">
+            Semantic Theme Demo
+          </h1>
+          <p className="text-lg text-text-secondary">
+            A comprehensive design system with semantic color and font tokens
+          </p>
         </header>
 
         {/* Semantic Colors Section */}
