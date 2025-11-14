@@ -19,6 +19,7 @@ ENV NODE_ENV=production
 COPY --from=builder /build/.next/standalone ./
 COPY --from=builder /build/.next/static ./.next/static
 COPY --from=builder /build/public ./public
+COPY --from=builder /build/node_modules ./node_modules
 
 EXPOSE 3000
 
