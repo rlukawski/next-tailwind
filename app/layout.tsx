@@ -24,27 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const stored = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const shouldBeDark = stored === 'dark' || (!stored && prefersDark);
-                
-                if (shouldBeDark) {
-                  document.documentElement.classList.add('dark');
-                  document.documentElement.classList.remove('light');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                  document.documentElement.classList.add('light');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

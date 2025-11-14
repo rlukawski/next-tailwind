@@ -128,6 +128,67 @@
   --font-mono: var(--font-mono);
 }
 
+/* Light mode - class-based (manual toggle override) */
+.light,
+.light :root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Semantic color tokens - Light mode */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-light: #dbeafe;
+  --color-primary-dark: #1e40af;
+  
+  --color-secondary: #8b5cf6;
+  --color-secondary-hover: #7c3aed;
+  --color-secondary-light: #ede9fe;
+  --color-secondary-dark: #5b21b6;
+  
+  --color-accent: #f59e0b;
+  --color-accent-hover: #d97706;
+  --color-accent-light: #fef3c7;
+  --color-accent-dark: #92400e;
+  
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-success-light: #d1fae5;
+  --color-success-dark: #047857;
+  
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-error-dark: #b91c1c;
+  
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-warning-dark: #92400e;
+  
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-info-light: #cffafe;
+  --color-info-dark: #0e7490;
+  
+  /* Text colors */
+  --color-text-primary: #171717;
+  --color-text-secondary: #525252;
+  --color-text-muted: #737373;
+  --color-text-inverse: #ffffff;
+  
+  /* Background colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-muted: #f3f4f6;
+  --color-bg-elevated: #ffffff;
+  
+  /* Border colors */
+  --color-border: #e5e7eb;
+  --color-border-muted: #f3f4f6;
+  --color-border-focus: #3b82f6;
+}
+
 /* Dark mode - class-based (manual toggle) */
 .dark,
 .dark :root {
