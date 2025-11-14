@@ -1,0 +1,20 @@
+services:
+  web:
+    image: ghcr.io/rlukawski/test-personal-website:latest
+    init: true
+    restart: always
+    build: .
+    networks:
+      - proxy-network
+    deploy:
+      replicas: 1
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.test-personal-website-secure.rule=Host(`test.lukawski.eu`)'
+      - 'traefik.http.routers.test-personal-website-secure.entrypoints=websecure'
+      - 'traefik.http.routers.test-personal-website-secure.tls.certresolver=myresolver'
+      - 'traefik.http.services.test-personal-website-secure.loadbalancer.server.port=3000'
+
+networks:
+  proxy-network:
+    external: true
